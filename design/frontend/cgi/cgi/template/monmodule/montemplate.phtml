@@ -1,0 +1,33 @@
+<?php
+
+echo $this->displayMessage();
+
+echo Mage::helper('monmodule/monhelper')->displayHelper();
+?>
+
+<br>
+<?php
+echo Mage::helper("monmodule")->__('Hello world');
+
+echo Mage::helper('catalog')->__('Account Dashboard');
+
+
+?><br>
+
+
+<?php
+
+$collection = $this->getCollection();
+?>
+<table>
+    <?php foreach ($collection as $nbClient): ?>
+        <tr>
+            <td><?php echo $nbClient->getData('nom'); ?></td>
+            <td>&nbsp;</td>
+            <td><?php echo $nbClient->getData('nombre_commandes'); ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+<?php
+
+echo "value : " . Mage::getStoreConfig('masection/mongroupe/monchamp1');

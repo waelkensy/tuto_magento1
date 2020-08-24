@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <monmodule_index_chargelayout>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="monmodule/monblock" name="montemplate" template="monmodule/montemplate.phtml"/>
+        </reference>
+    </monmodule_index_chargelayout>
+</layout>
