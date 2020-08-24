@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <!-- Début Déclaration d’un nouveau tab -->
+        <mononglet translate="label" module="monmodule">
+            <label>My Tab</label>
+            <sort_order>101</sort_order>
+        </mononglet>
+        <!-- Fin Déclaration d’un nouveau tab -->
+    </tabs>
+    <sections>
+        <!-- Début Déclaration d’une section utilisant mononglet -->
+        <masection translate="label" module="monmodule">
+            <label>My Section</label>
+            <tab>mononglet</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <!-- Début Déclaration d’un nouveau groupe -->
+                <mongroupe translate="label" module="monmodule">
+                    <label>My group</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!-- Début Ajout des champs -->
+                        <monchamp1 translate="label comment" module="monmodule">
+                            <label>Text field</label>
+                            <!-- Commentaire sans balise HTML -->
+                            <comment>This is a text field</comment>
+                            <frontend_type>Text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </monchamp1>
+                        <monchamp2 translate="label comment" module="monmodule">
+                            <label>Select field</label>
+                            <!-- Commentaire avec balise HTML -->
+                            <comment><![CDATA[<h2>This is a select</h2>]]></comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </monchamp2>
+                        <!-- Fin Ajout des champs -->
+                    </fields>
+                </mongroupe>
+                <!-- Fin Déclaration d’un nouveau groupe -->
+            </groups>
+        </masection>
+        <!-- Fin Déclaration d’une section utilisant mononglet -->
+        <!-- Début ajout section dans tab catalog -->
+        <masection1 translate="label" module="monmodule">
+            <label>My Section1</label>
+            <tab>catalog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+        </masection1>
+        <!-- Fin ajout section dans tab catalog -->
+        <!-- Début Mise en place d’un groupe dans la section catalog -->
+        <catalog>
+            <groups>
+                <mongroupe1 translate="label" module="monmodule">
+                    <label>My group</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!-- Début Ajout d’un champ -->
+                        <monchamp3 translate="label comment" module="monmodule">
+                            <label>Text field</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </monchamp3>
+                        <!-- Fin Ajout d’un champ -->
+                    </fields>
+                </mongroupe1>
+            </groups>
+        </catalog>
+        <!-- Fin Mise en place d’un groupe dans la section catalog -->
+    </sections>
+</config>

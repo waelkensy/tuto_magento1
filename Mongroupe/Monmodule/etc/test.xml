@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<config>
+    <menu>
+        <modulename>
+            <title>Menu title</title>
+            <sort_order>100</sort_order>
+            <children>
+                <itemname>
+                    <title>Menu item title</title>
+                    <sort_order>100</sort_order>
+                    <action>modulename/adminhtml_monmodule/index</action>
+                </itemname>
+            </children>
+        </modulename>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <masection>
+                                        <title>Section Title</title>
+                                    </masection>
+                                    <masection1 translate="title" module="monmodule">
+                                        <title>My Section1</title>
+                                        <sort_order>1000</sort_order>
+                                    </masection1>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
